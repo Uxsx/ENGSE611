@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hw1.css" />
+    <title>Siraphop Web</title>
+  </head>
+  <body>
+    <!-- Head -->
+    <header align="center">
+      <h1>Website Siraphop</h1>
+      <p>HTML</p>
+      <img
+        style="width: 200px; height: 200px"
+        src="https://img5.pic.in.th/file/secure-sv1/KITTYYYYYYYYYYYYYYYYYYYYY.jpeg"
+        alt="cat"
+      />
+    </header>
+
+    <!-- Nav -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#form">Form</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- ส่วนหลักหน้าเว็ป -->
+      <section id="home">
+        <h2>Hello Welcome</h2>
+        <p>Make Semantic HTML</p>
+      </section>
+      <!-- หลายชั้น -->
+      <section id="about">
+        <h2>ประวัติส่วนตัว</h2>
+        <article>
+          <h3>สิ่งที่ชอบ</h3>
+          <p>สีดำ</p>
+          <p>ข้าวมันไก่</p>
+          <p>เล่นเกม</p>
+        </article>
+      </section>
+      <!-- ข้อมูลเพิ่ม -->
+      <aside>
+        <h3>ข้อมูลเพิ่มเติม</h3>
+        <p>อยากรู้อะไร</p>
+      </aside>
+    </main>
+
+    <table id="table">
+      <caption>
+        ตาราง
+      </caption>
+      <tr>
+        <th rowspan="2">ลำดับ</th>
+        <th colspan="2">ข้อมูล</th>
+        <th rowspan="2">รวม</th>
+      </tr>
+      <tr>
+        <th>ชื่อ</th>
+        <th>อายุ</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>สมชาย</td>
+        <td>25</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>สมหญิง</td>
+        <td>30</td>
+        <td>1</td>
+      </tr>
+    </table>
+
+    <form align="center" id="form">
+      <h4>กรุณากรอกกก</h4>
+      <p>คุณเพศอะไร</p>
+      <input type="radio" name="gender" id="male" /> ผู้ชาย
+      <input type="radio" name="gender" id="female" /> ผู้หญิง <br /><br />
+      <p>วันนี้วันที่เท่าไหร่เวลาอะไร</p>
+      <input type="datetime-local" name="date" id="date" />
+      <br /><br />
+      <label>ชื่อ</label>
+      <input type="text" name="firstname" />
+      <label>นามสกุล</label>
+      <input type="text" name="lastname" />
+      <br /><br />
+      <label>กรอกอีเมล</label>
+      <input type="email" name="email" id="email" />
+      <br /><br />
+      <label>เพิ่มไฟล์</label>
+      <input type="file" />
+      <br /><br />
+      <button type="submit">บันทึก</button>
+    </form>
+
+    <footer id="contact" align="center">
+      <p>© 2025 | Contact: devcmpff@gmail.com</p>
+    </footer>
+  </body>
+</html>
