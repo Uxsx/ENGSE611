@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      p {
+        color: green;
+      }
+
+      /* p:hover {
+        color: red;
+        background-color: lightgray;
+        cursor: pointer;
+      } */
+
+      .highlight {
+        background-color: yellow;
+        padding: 5px;
+      }
+
+      #header {
+        background: blue;
+        color: wheat;
+        padding: 10px;
+      }
+
+      input[type="text"] {
+        border: 2px solid green;
+        padding: 5px;
+        border-radius: 6px;
+        text-align: center;
+      }
+
+      input[type="text"]:focus {
+        border-color: orange;
+        box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+        background-color: #fff8e1;
+        outline: none;
+      }
+
+      .parent {
+        font-size: 16px; /* ค่าเริ่มต้น */
+        border: 2px solid #ccc;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      /* Child ใช้ em → เปลี่ยนตาม parent */
+      .child-title {
+        font-size: 2em; /* 2 × parent */
+        color: #c0392b;
+        font-weight: bold;
+      }
+
+      .child-text {
+        font-size: 1.2em; /* 1.2 × parent */
+        color: #2c3e50;
+      }
+
+      /* ตัวอย่างที่ใช้ px → ไม่ยืดหยุ่น */
+      .fixed-text {
+        font-size: 18px;
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ตัวอย่าง CSS Selectors</h1>
+
+    <p>ข้อความนี้ถูกจัดสีด้วย Element Selector ( P { color: green; )</p>
+
+    <p class="highlight">
+      ข้อความนี้ถูกจัดสไตล์ด้วย Class Selector ( .highlight )
+    </p>
+
+    <p id="header">นี่คือพื้นที่ Header ( ID Selector )</p>
+
+    <p>นำเมาส์ไปวางที่ข้อความนี้เพื่อดูการใช้งานของ CSS</p>
+
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="พิมพ์ชื่อผู้ใช้"
+    />
+
+    <h2>สาธิต Font-size: Parent → Child (em)</h2>
+
+    <form id="fontForm">
+      <label>ใส่ขนาดฟอนต์ Parent (px): </label>
+      <input type="number" id="fontSizeInput" value="16" min="10" max="40" />
+      <button type="submit">ปรับขนาดฟอนต์</button>
+    </form>
+
+    <div class="parent" id="parentBox">
+      <p class="child-title">หัวข้อหลัก (2em)</p>
+      <p class="child-text">ข้อความย่อย (1.2em) → เปลี่ยนตาม Parent</p>
+      <p class="fixed-text">ข้อความแบบ px (18px) → ไม่เปลี่ยน</p>
+    </div>
+
+    <script>
+      document
+        .getElementById("fontForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const newSize = document.getElementById("fontSizeInput").value;
+          document.getElementById("parentBox").style.fontSize = newSize + "px";
+        });
+    </script>
+  </body>
+</html>
