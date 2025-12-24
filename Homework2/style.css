@@ -1,0 +1,160 @@
+/* นำเข้า Font เพื่อความสวยงาม */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #333;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: rgba(52, 56, 65, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 10%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.banner-content h1 {
+  font-size: 1.5rem;
+  color: #4a9eff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #4a9eff;
+}
+
+.banner img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4a9eff;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 1rem 0;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4a9eff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  background-color: gray;
+  color: white;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  background: #1a1d23;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4a9eff;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+#contact-link {
+  text-align: center;
+}
+
+#contact-link a img {
+  filter: brightness(0) invert(1);
+  margin: 0 15px;
+  transition: 0.3s transform;
+}
+
+#contact-link a img:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
